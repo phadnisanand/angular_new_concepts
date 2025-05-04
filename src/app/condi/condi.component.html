@@ -1,0 +1,34 @@
+<p>condi works! {{ streamingService }}</p>
+@if (streamingService === 'Netflix'){
+  <div>Peaky Blinders</div>
+}
+@else if (streamingService === 'Disney+'){
+  <div>Disney</div>
+}
+@else {
+  <div>Ted Lasso</div>
+}
+
+
+@switch(streamingService) {
+  @case ('Disney+') {
+    <div>'Mandalorian'</div>
+  } @case ('AppleTV') {
+    <div>'Ted Lasso'</div>
+  } @default {
+    <div>'Peaky Blinders'</div>
+  }
+}
+
+
+@for (fruit of fruits; track $index) {
+<ul>
+    <li>{{$index}}  {{fruit}}</li>
+</ul>
+} @empty {
+  Empty list of fruits
+}
+
+
+<input type="text" id="name" name="name" [(ngModel)]="streamingService"><br />
+<button (click)="toggleDemo()">Toggle</button>

@@ -1,0 +1,16 @@
+<p>localtem works!</p>
+@let name = user.name;
+@let postdata = posts$ | async;
+{{ name}}
+<div *ngFor="let post of postdata">
+  @let title = post.title;
+  <p>{{ title }}</p>
+</div>
+
+
+@for (product of products; track product.name) {
+@let totalPrice = product.price;
+<div>
+  <p>{{ product.name }} - Total: {{ totalPrice | currency }}</p>
+</div>
+}
