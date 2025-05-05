@@ -1,0 +1,22 @@
+<p>changedec works!</p>
+<p>{{ streamingService }}</p>
+@if (streamingService === 'Netflix'){
+<div>Peaky Blinders</div>
+}
+@else if (streamingService === 'Disney+'){
+<div>Disney</div>
+}
+@else {
+<div>Ted Lasso</div>
+}
+
+{{ name}}
+
+<button (click)="toggleDemo()">Toggle</button>
+<input type="text" id="name" name="name" [(ngModel)]="streamingService"><br />
+
+<div *ngFor="let post of posts()">
+  @let title = post.title;
+  <p>{{ title }}</p>
+</div>
+

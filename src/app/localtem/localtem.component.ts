@@ -7,7 +7,7 @@ import { CommonModule, JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-localtem',
-  imports: [JsonPipe, CommonModule],
+  imports: [CommonModule],
   templateUrl: './localtem.component.html',
   styleUrl: './localtem.component.css'
 })
